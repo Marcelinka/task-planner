@@ -15,6 +15,7 @@ module.exports = {
     },
     spacing: {
       4: '4px',
+      18: '18px',
       80: '80px',
     },
     fontFamily: {
@@ -22,11 +23,11 @@ module.exports = {
     },
     extend: {
       height: {
-        header: '68px',
-        avatar: '36px',
+        36: '36px',
+        68: '68px',
       },
       width: {
-        avatar: '36px',
+        36: '36px',
       },
       backgroundImage: {
         'purple-gradient':
@@ -37,7 +38,7 @@ module.exports = {
         15: '15px',
       },
       lineHeight: {
-        avatar: '36px',
+        36: '36px',
       },
     },
   },
