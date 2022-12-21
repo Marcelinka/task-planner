@@ -2,7 +2,44 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,vue}'],
   theme: {
-    extend: {},
+    colors: {
+      white: '#FFFFFF',
+      black: '#000000',
+      'black-14-opacity': 'rgba(0, 0, 0, 0.14)',
+      grey: '#C5C5C5',
+      'light-grey': '#EFEEEE',
+      'dark-grey': '#5C5F62',
+      'medium-grey': '#EDEDED',
+      'light-blue': '#EEE9FD',
+      'blue-purple': '#6F47EB',
+    },
+    spacing: {
+      4: '4px',
+      80: '80px',
+    },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
+    extend: {
+      height: {
+        header: '68px',
+        avatar: '36px',
+      },
+      width: {
+        avatar: '36px',
+      },
+      backgroundImage: {
+        'purple-gradient':
+          'linear-gradient(235.14deg, #D882FA 41.45%, #9969FF 92.71%)',
+      },
+      fontSize: {
+        base: '14px',
+        15: '15px',
+      },
+      lineHeight: {
+        avatar: '36px',
+      },
+    },
   },
   plugins: [],
 };
