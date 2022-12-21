@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import PlusIcon from '@/assets/svg/plus-icon.svg?component';
+
+import useUserService from '@/services/UserService';
+
+const userService = useUserService();
 </script>
 
 <template>
@@ -10,7 +14,7 @@ import PlusIcon from '@/assets/svg/plus-icon.svg?component';
     <div
       class="h-36 w-36 bg-purple-gradient rounded-full font-semibold text-15 text-white text-center leading-36"
     >
-      ДК
+      {{ userService.avatar }}
     </div>
   </div>
 </template>
