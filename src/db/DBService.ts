@@ -8,8 +8,8 @@ type TSelect = {
   from: string;
 };
 
-class DBService extends Multitone {
-  waitForInit: Promise<boolean> = Promise.reject();
+export class DBService extends Multitone {
+  waitForInit: Promise<boolean>;
 
   constructor() {
     super();

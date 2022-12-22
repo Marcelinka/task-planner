@@ -8,8 +8,12 @@ class UserService extends Multitone {
   get avatar() {
     return `${this.name[0]}${this.surname[0]}`.toUpperCase();
   }
+
+  init() {
+    // Initialization after calling a hook
+  }
 }
 
 export const getUserService = getInstanceFactory<UserService>(UserService);
 
-export default useServiceFactory(getUserService);
+export const useUserService = useServiceFactory(getUserService, UserService);

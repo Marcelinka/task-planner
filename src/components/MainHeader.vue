@@ -2,7 +2,7 @@
 import PlusIcon from '@/assets/svg/plus-icon.svg?component';
 import LogoIcon from '@/assets/svg/logo.svg?component';
 
-import useUserService from '@/services/UserService';
+import { useUserService } from '@/services/UserService';
 
 const userService = useUserService();
 </script>
