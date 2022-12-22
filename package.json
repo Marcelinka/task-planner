@@ -13,6 +13,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore"
   },
   "dependencies": {
+    "jsstore": "^4.5.0",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
