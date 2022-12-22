@@ -4,14 +4,22 @@ module.exports = {
   theme: {
     colors: {
       white: '#FFFFFF',
-      black: '#000000',
-      'black-14-opacity': 'rgba(0, 0, 0, 0.14)',
-      grey: '#C5C5C5',
-      'light-grey': '#EFEEEE',
-      'dark-grey': '#5C5F62',
-      'medium-grey': '#EDEDED',
-      'light-blue': '#EEE9FD',
-      'blue-purple': '#6F47EB',
+      black: {
+        DEFAULT: '#000000',
+        '14-opacity': 'rgba(0, 0, 0, 0.14)',
+      },
+      grey: {
+        100: '#EFEEEE',
+        200: '#EDEDED',
+        300: '#E5E5E5',
+        400: '#DBDBDB',
+        500: '#C5C5C5',
+        800: '#5C5F62',
+      },
+      blue: {
+        light: '#EEE9FD',
+        purple: '#6F47EB',
+      },
     },
     spacing: {
       4: '4px',
@@ -39,6 +47,9 @@ module.exports = {
       },
       lineHeight: {
         36: '36px',
+      },
+      borderWidth: {
+        DEFAULT: '1px',
       },
     },
   },
