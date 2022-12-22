@@ -17,6 +17,7 @@ const userService = useUserService();
     </button>
     <div
       class="h-36 w-36 bg-purple-gradient rounded-full font-semibold text-15 text-white text-center leading-36"
+      data-test-id="avatar"
     >
       {{ userService.avatar }}
     </div>
