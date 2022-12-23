@@ -18,7 +18,7 @@ const props = defineProps<{
 
 <template>
   <div class="flex gap-x-16 flex-wrap">
-    <EpicTag v-if="props.owner" title="Постановщик задачи"
+    <EpicTag v-if="props.owner" title="Постановщик задачи" data-test-id="owner"
       >• Created By
       <OwnerLink :link="props.owner?.link">{{
         props.owner?.name
@@ -30,6 +30,7 @@ const props = defineProps<{
         v-for="project in props.projects"
         :key="project"
         title="Связанный проект"
+        data-test-id="project"
       >
         <ProjectIcon /> {{ project }}
       </EpicTag>
