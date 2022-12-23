@@ -12,7 +12,7 @@ const props = defineProps<{
     link?: string;
   };
   projects?: string[];
-  estimate: number;
+  estimate: string;
 }>();
 </script>
 
@@ -36,7 +36,7 @@ const props = defineProps<{
     </template>
 
     <EpicTag title="Предварительная оценка"
-      ><EstimateIcon /> {{ props.estimate }}h</EpicTag
+      ><EstimateIcon /> {{ props.estimate }}</EpicTag
     >
   </div>
 </template>

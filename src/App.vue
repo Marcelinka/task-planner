@@ -13,13 +13,9 @@ const epicService = useEpicService();
     <main class="flex flex-1 gap-x-30 py-30 overflow-x-auto">
       <EpicColumn
         class="first:ml-80 last:mr-80 flex-none"
-        v-if="epicService.epics.length"
-        :epic="epicService.epics[0]"
-      />
-      <EpicColumn
-        class="first:ml-80 last:mr-80 flex-none"
-        v-if="epicService.epics.length"
-        :epic="epicService.epics[0]"
+        v-for="epic in epicService.epics"
+        :key="epic.id"
+        :epic="epic"
       />
     </main>
   </div>
