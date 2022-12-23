@@ -27,6 +27,23 @@ export class DBService extends Multitone {
       from: 'Epic',
     });
   }
+
+  test() {
+    return connection.insert({
+      into: 'Epic',
+      values: [
+        {
+          title: 'Тестовый эпик',
+          owner: {
+            name: 'Руслан',
+            link: 'https://talk.cdek.ru/cdek/messages/@r.bataev',
+          },
+          projects: ['LKFL', 'SITE'],
+          estimate: 37,
+        },
+      ],
+    });
+  }
 }
 
 export const getDBService = getInstanceFactory<DBService>(DBService);
