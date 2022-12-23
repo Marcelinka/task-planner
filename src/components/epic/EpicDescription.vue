@@ -2,6 +2,9 @@
 import EpicTag from './EpicTag.vue';
 import OwnerLink from './OwnerLink.vue';
 
+import ProjectIcon from '@/assets/svg/project.svg?component';
+import EstimateIcon from '@/assets/svg/estimate.svg?component';
+
 // part of TEpic
 const props = defineProps<{
   owner?: {
@@ -15,7 +18,7 @@ const props = defineProps<{
 
 <template>
   <div class="flex gap-x-16 flex-wrap">
-    <EpicTag v-if="props.owner"
+    <EpicTag v-if="props.owner" title="Постановщик задачи"
       >• Created By
       <OwnerLink :link="props.owner?.link">{{
         props.owner?.name
@@ -23,11 +26,17 @@ const props = defineProps<{
     >
 
     <template v-if="props.projects?.length">
-      <EpicTag v-for="project in props.projects" :key="project">
-        {{ project }}
+      <EpicTag
+        v-for="project in props.projects"
+        :key="project"
+        title="Связанный проект"
+      >
+        <ProjectIcon /> {{ project }}
       </EpicTag>
     </template>
 
-    <EpicTag>{{ props.estimate }}h</EpicTag>
+    <EpicTag title="Предварительная оценка"
+      ><EstimateIcon /> {{ props.estimate }}h</EpicTag
+    >
   </div>
 </template>
