@@ -13,7 +13,8 @@ module.exports = {
         200: '#EDEDED',
         300: '#E5E5E5',
         400: '#DBDBDB',
-        500: '#C5C5C5',
+        500: '#D1D1D1',
+        600: '#C5C5C5',
         800: '#5C5F62',
       },
       blue: {
@@ -25,7 +26,10 @@ module.exports = {
       4: '4px',
       16: '16px',
       18: '18px',
+      20: '20px',
+      30: '30px',
       80: '80px',
+      500: '500px',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -51,6 +55,9 @@ module.exports = {
       },
       borderWidth: {
         DEFAULT: '1px',
+      },
+      borderRadius: {
+        10: '10px',
       },
     },
   },
