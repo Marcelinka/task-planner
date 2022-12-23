@@ -8,7 +8,7 @@ const userService = useUserService();
 </script>
 
 <template>
-  <div
+  <header
     class="h-68 flex flex-row items-center justify-end px-80 gap-x-18 border-b border-grey-300"
   >
     <LogoIcon class="mr-auto" width="150" />
@@ -16,10 +16,10 @@ const userService = useUserService();
       <PlusIcon class="inline text-center align-sub" />
     </button>
     <div
-      class="h-36 w-36 bg-purple-gradient rounded-full font-semibold text-15 text-white text-center leading-36"
+      class="h-36 w-36 bg-purple-gradient rounded-full font-semibold text-sm text-white text-center leading-36"
       data-test-id="avatar"
     >
       {{ userService.avatar }}
     </div>
-  </div>
+  </header>
 </template>
