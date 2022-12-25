@@ -1,8 +1,12 @@
-import Multitone, { getInstanceFactory } from '@/services/base/Multitone';
+import Multitone, {
+  destroyFactory,
+  getInstanceFactory,
+} from '@/services/base/Multitone';
 
-import connection from '@/jsstore_con';
+import createConnection from '@/jsstore_con';
 import scheme from './scheme';
 import type { TEpic } from './scheme';
+import type { Connection } from 'jsstore';
 
 type TSelect = {
   from: string;
@@ -11,15 +15,18 @@ type TSelect = {
 export class DBService extends Multitone {
   waitForInit: Promise<boolean>;
 
+  connection: Connection;
+
   constructor() {
     super();
 
-    this.waitForInit = connection.initDb(scheme);
+    this.connection = createConnection();
+    this.waitForInit = this.connection.initDb(scheme);
   }
 
   async waitSelect<T>(selectQuery: TSelect) {
     await this.waitForInit;
-    return connection.select<T>(selectQuery);
+    return this.connection.select<T>(selectQuery);
   }
 
   getEpics() {
@@ -29,7 +36,7 @@ export class DBService extends Multitone {
   }
 
   test() {
-    return connection.insert({
+    return this.connection.insert({
       into: 'Epic',
       values: [
         {
@@ -47,3 +54,5 @@ export class DBService extends Multitone {
 }
 
 export const getDBService = getInstanceFactory<DBService>(DBService);
+
+export const destroyDBService = destroyFactory(DBService);

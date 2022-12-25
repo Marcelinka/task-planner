@@ -36,7 +36,7 @@ const props = defineProps<{
       </EpicTag>
     </template>
 
-    <EpicTag title="Предварительная оценка"
+    <EpicTag title="Предварительная оценка" data-test-id="estimate"
       ><EstimateIcon /> {{ props.estimate }}</EpicTag
     >
   </div>

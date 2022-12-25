@@ -12,6 +12,7 @@ const epicService = useEpicService();
     <MainHeader class="flex-none" />
     <main class="flex flex-1 gap-x-30 py-30 overflow-x-auto">
       <EpicColumn
+        data-test-id="epic"
         class="first:ml-80 last:mr-80 flex-none"
         v-for="epic in epicService.epics"
         :key="epic.id"

@@ -1,5 +1,6 @@
 import { describe, test } from 'vitest';
+import showEpics from './epic/showEpics';
 
-describe.concurrent('Эпик', () => {
-  test.todo('Должен показывать созданные ранее эпики');
+describe('Эпик', () => {
+  test('Должен показывать созданные ранее эпики', showEpics);
 });
